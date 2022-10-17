@@ -61,7 +61,7 @@
 					
 					// Activate notifications stream
 					userConversationsTopic = 'v2.users.' + me.id + '.conversations';
-				console.log('@@@ TOPIC ATTIVO);
+				console.log('@@@ TOPIC ATTIVO');
 					return notificationsApi.putNotificationsChannelSubscriptions(notificationChannel.id, [ { id: userConversationsTopic } ]);
 				})
 
