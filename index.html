@@ -51,6 +51,7 @@
 					// Set up web socket
 					webSocket = new WebSocket(notificationChannel.connectUri);
 					webSocket.onmessage = handleNotification;
+				console.log('@@@ WEBSOCKET ATTIVA');
 					
 					// Get Id of user
 					return userApi.getUsersMe();
@@ -60,6 +61,7 @@
 					
 					// Activate notifications stream
 					userConversationsTopic = 'v2.users.' + me.id + '.conversations';
+				console.log('@@@ TOPIC ATTIVO);
 					return notificationsApi.putNotificationsChannelSubscriptions(notificationChannel.id, [ { id: userConversationsTopic } ]);
 				})
 
